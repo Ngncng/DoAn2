@@ -1,0 +1,25 @@
+# Môi trường ảo
+venv/
+
+# Biến môi trường - KHÔNG commit
+.env
+
+# File upload của người dùng
+uploads/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# IDE
+.vscode/
+.idea/
+
+# Log
+*.log
+logs/
+
+# Database backup
+*.bak

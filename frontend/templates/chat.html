@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hỏi Đáp Trần Hưng Đạo — HUNGDAO_CHATBOT</title>
+  <!-- CSS tách riêng, không viết inline -->
+  <link rel="stylesheet" href="/static/css/style.css" />
+</head>
+<body>
+
+<!-- ============================================================
+     HEADER
+     ============================================================ -->
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/chat" class="header-brand">
+      <div class="header-emblem">⚔️</div>
+      <div class="header-titles">
+        <span class="header-title">HƯNG ĐẠO ĐẠI VƯƠNG</span>
+        <span class="header-subtitle">Quốc Công Tiết Chế · Đại Việt Sử Ký</span>
+      </div>
+    </a>
+    <nav class="header-nav">
+      <a href="/chat" class="nav-link active">Hỏi Đáp</a>
+      <a href="/upload" class="nav-link">Tài Liệu</a>
+    </nav>
+  </div>
+  <div class="header-ornament"></div>
+</header>
+
+<!-- ============================================================
+     TRANG CHAT
+     ============================================================ -->
+<main class="page-wrapper">
+  <div class="chat-page">
+
+    <!-- Thanh thông tin persona -->
+    <div class="chat-header-panel">
+      <div class="chat-persona">
+        <div class="persona-avatar">🏯</div>
+        <div>
+          <div class="persona-name">Trần Hưng Đạo</div>
+          <div class="persona-title">Dựa trên sử liệu · Trả lời theo tư liệu lịch sử</div>
+        </div>
+      </div>
+      <div style="display:flex; align-items:center; gap:12px;">
+        <div class="status-indicator">
+          <div class="status-dot" id="status-dot"></div>
+          <span id="status-text">Sẵn sàng</span>
+        </div>
+        <button
+          class="btn btn-secondary"
+          id="btn-clear-chat"
+          title="Xóa lịch sử chat"
+          style="font-size:0.8rem; padding:6px 14px;"
+        >
+          🗑️ Xóa lịch sử
+        </button>
+      </div>
+    </div>
+
+    <!-- Khung hội thoại -->
+    <div class="chat-messages-wrapper">
+      <div class="chat-messages" id="chat-messages">
+
+        <!-- Tin nhắn chào mừng — hiện khi chưa có chat -->
+        <div class="welcome-message" id="welcome-message">
+          <span class="welcome-emblem">⚔️</span>
+          <div class="welcome-title">Kính chào Hậu Sinh</div>
+          <div class="ornament-divider">❖</div>
+          <p class="welcome-text">
+            Ta là Trần Hưng Đạo, Quốc Công Tiết Chế của Đại Việt.<br/>
+            Hậu sinh có điều gì muốn hỏi về lịch sử, trận mạc,<br/>
+            hay binh pháp của ta, cứ hỏi, ta sẽ thuật lại.
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Ô nhập câu hỏi -->
+    <div class="chat-input-area">
+      <textarea
+        class="chat-input"
+        id="chat-input"
+        placeholder="Hậu sinh muốn hỏi điều gì?... (Enter để gửi, Shift+Enter xuống dòng)"
+        rows="1"
+        maxlength="2000"
+      ></textarea>
+      <button class="chat-send-btn" id="chat-send-btn" title="Gửi câu hỏi">
+        ➤
+      </button>
+    </div>
+
+  </div>
+</main>
+
+<!-- Toast thông báo -->
+<div class="toast" id="toast"></div>
+
+<!-- JS tách riêng, không viết inline -->
+<script src="/static/js/chat.js"></script>
+</body>
+</html>
